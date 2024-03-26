@@ -1,0 +1,12 @@
+/* #root{
+  padding: 25px;
+  color:wheat ;
+  background: black;
+}*/
+body{
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+  text-align: center;
+  display: flex;
+} 
