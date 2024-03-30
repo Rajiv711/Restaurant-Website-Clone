@@ -17,3 +17,28 @@ First lecture of Namaste React where we learnerd
       a]react link in cdn links basically contains the very core code which need to be there for react dev
       b]react dom links contains the code which is required for making changes in our dom of the page
 8]We use JSX in our react dev beacause it makes our life easy
+
+
+
+
+/**
+ * Header
+ *  -Logo
+ *  -Nav Items
+ * Body
+ *  -Search
+ *  -RestaurantContainer
+ *  -RestaurantCard
+ *     -Img
+ *     -Name
+ *     -StarRating
+ *     -Cuisine
+ *     -DeliveryTime
+ * Footer
+ *  -Copyright
+ *  -Links
+ *  -Address
+ *  -Contact
+ *
+ */
+
