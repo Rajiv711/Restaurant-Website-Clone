@@ -1,4 +1,12 @@
 
+html{
+  background-color: #000000;
+}
+
+body{
+  background-color: #ffffff;
+}
+
 
 .header{
   display: flex;
@@ -26,11 +34,18 @@
 }
 .search{
 padding: 0;
+
 }
+.searchBar{
+  justify-content: flex-end;
+}
+
 .filter{
   display: flex;
   padding: 10px;
   align-items: center;
+  justify-content: space-between;
+
 }
 .reset-btn{
   margin: 10px 10px;
@@ -97,4 +112,10 @@ padding: 0;
   background-color: rgba(219, 62, 19, 0.853);
   scale: 0.95;
   cursor: pointer;
+}
+
+.error-page{
+  height: 800px;
+  background-color: #000000;
+  color: red;
 }

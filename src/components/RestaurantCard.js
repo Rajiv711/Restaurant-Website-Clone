@@ -10,7 +10,6 @@ const RestaunrantCard = (props) => {
 
   const { deliveryTime } = sla;
 
-  console.log(props);
   return (
     <div className="res-card">
       <img

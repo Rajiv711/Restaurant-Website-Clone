@@ -10,7 +10,6 @@ const Body = () => {
 
   const [searchText, setSearchText] = useState("");
 
-
   useEffect(() => {
     fetchData();
   }, []);
@@ -38,26 +37,28 @@ const Body = () => {
   ) : (
     <div className="body">
       <div className="filter">
-        <button
-          className="filter-btn"
-          onClick={() => {
-            // setUnFilteredList(restaunrantList);
-            const filteredList = restaunrantList.filter(
-              (res) => res.info.avgRating > 4
-            );
-            setRestaunrantList(filteredList);
-          }}
-        >
-          Top Rated Restaurants
-        </button>
-        <button
-          className="reset-btn"
-          onClick={() => {
-            setRestaunrantList(unFilteredList);
-          }}
-        >
-          Reset
-        </button>
+        <div className="fliter-btns">
+          <button
+            className="filter-btn"
+            onClick={() => {
+              // setUnFilteredList(restaunrantList);
+              const filteredList = restaunrantList.filter(
+                (res) => res.info.avgRating > 4
+              );
+              setRestaunrantList(filteredList);
+            }}
+          >
+            Top Rated Restaurants
+          </button>
+          <button
+            className="reset-btn"
+            onClick={() => {
+              setRestaunrantList(unFilteredList);
+            }}
+          >
+            Reset
+          </button>
+        </div>
         <div className="searchBar">
           <input
             type="text"
@@ -70,7 +71,7 @@ const Body = () => {
           <button
             onClick={() => {
               const filteredRest = restaunrantList.filter((res) =>
-              res.info.name.toLowerCase().includes(searchText.toLowerCase())
+                res.info.name.toLowerCase().includes(searchText.toLowerCase())
               );
               setRestaunrantList(filteredRest);
             }}
@@ -80,9 +81,13 @@ const Body = () => {
         </div>
       </div>
       <div className="res-container">
-        {restaunrantList.map((restaurant) => (
-          <RestaunrantCard key={restaurant.info.id} resData={restaurant} />
-        ))}
+        {restaunrantList.length === 0 ? (
+          <h1>No Restaurants</h1>
+        ) : (
+          restaunrantList.map((restaurant) => (
+            <RestaunrantCard key={restaurant.info.id} resData={restaurant} />
+          ))
+        )}
       </div>
     </div>
   );
